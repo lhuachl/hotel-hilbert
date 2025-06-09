@@ -2,11 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+/* Navbar personalizado */
+.navbar-custom {
+  @apply bg-gray-900 px-8 py-4 shadow-lg rounded-b-2xl sticky top-0 z-50;
+  /* Fondo con blur y transición para dar efecto moderno */
+  backdrop-filter: blur(8px);
+  transition: background 0.4s;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.navbar-list {
+  @apply flex justify-center space-x-8 m-0 p-0 list-none;
+}
+
+.navbar-item {
+  @apply font-semibold text-lg relative;
+}
+
+.navbar-link {
+  @apply text-white px-4 py-2 rounded-lg transition-colors duration-300 no-underline;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-link::before {
+  content: "";
+  @apply absolute left-0 top-0 w-full h-full rounded-lg transition-all duration-300;
+  background: linear-gradient(90deg, #fbbf24, #a78bfa 60%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.navbar-link:hover::before,
+.navbar-link:focus::before {
+  opacity: 0.2;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  @apply text-yellow-400;
+}
+.aurora-bg {
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  animation: aurora-shift 16s linear infinite alternate;
+}
+
+.aurora-1 { animation-delay: 0s; }
+.aurora-2 { animation-delay: 2s; }
+.aurora-3 { animation-delay: 4s; }
+.aurora-4 { animation-delay: 6s; }
+
+@keyframes aurora-shift {
+  0% { filter: blur(60px) brightness(1); }
+  60% { filter: blur(100px) brightness(1.18); }
+  100% { filter: blur(60px) brightness(1); }
+}
+
+/* Hero title gradiente animado */
+.hero-title {
+  background: linear-gradient(90deg, #a5b4fc 10%, #818cf8 40%, #06b6d4 80%, #a5b4fc 100%);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: title-aurora-shine 6s linear infinite;
+  letter-spacing: 0.05em;
+}
+@keyframes title-aurora-shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.hero-btn-primary {
+  box-shadow: 0 10px 25px rgba(34,211,238,0.11), 0 0 18px 4px #6366f1cc;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-btn-primary::after {
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: 0;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(34,211,238,0.17) 50%, rgba(255,255,255,0.08) 100%);
+  transform: skewX(-30deg);
+  transition: left 0.4s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+
+.hero-btn-primary:hover::after {
+  left: 100%;
+}
+
+.hero-btn-secondary {
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 20px rgba(255,255,255,0.04);
 }
