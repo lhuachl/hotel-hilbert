@@ -9,7 +9,7 @@ export default function Benchpress({ scale = 1, autoRotate = true }) {
   const mixerRef = useRef();
 
   // 🎯 Cargar modelo local
-  const { scene, animations, loading, error } = useGLTFModel('/models/benchpress.glb');
+  const { scene,  loading, error } = useGLTFModel('/models/benchpress.glb');
 
   // 🔄 Animación por frame
   useFrame((state, delta) => {

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import  { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment, ContactShadows } from '@react-three/drei'
 import Benchpress from '../models3d/Benchpress'

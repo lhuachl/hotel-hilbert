@@ -1,4 +1,4 @@
-import React from "react"
+import PiscinaCard from "../components/estaticos/PiscinaCard"
 import Navbar from "../components/estaticos/Navbar"
 import Footer from "../components/estaticos/Footer"
 import Gymcard from "../components/estaticos/Gymcard"
@@ -19,6 +19,7 @@ export default function Servicios() {
             Nuestros Servicios
           </h1>
           <Gymcard />
+          <PiscinaCard />
         </div>
       </main>
 
