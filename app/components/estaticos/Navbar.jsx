@@ -6,7 +6,8 @@ const navLinks = [
   { href: "/", label: "Inicio", icon: "🏠" },
   { href: "/habitaciones", label: "Habitaciones", icon: "🛏️" },
   { href: "/servicios", label: "Servicios", icon: "🛎️" },
-  { href: "/contacto", label: "Contacto", icon: "📞" },
+  { href: "/historia", label: "Historia", icon: "📞" },
+  { href: "/login", label: "Login", icon: "📧" },
 ];
 
 const Navbar = () => {

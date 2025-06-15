@@ -114,14 +114,14 @@ const AboutSection = () => {
               
               <div className="text-center group">
                 <div className="text-4xl font-bold text-blue-600 mb-2">
-                  <span ref={el => statsRef.current[1] = el} data-value="28">0</span>+
+                  <span ref={el => statsRef.current[1] = el} data-value="69">0</span>+
                 </div>
                 <div className="text-sm text-gray-600 group-hover:text-blue-600 transition-colors">Años de Excelencia</div>
               </div>
               
               <div className="text-center group">
                 <div className="text-4xl font-bold text-blue-600 mb-2">
-                  <span ref={el => statsRef.current[2] = el} data-value="99">0</span>%
+                  <span ref={el => statsRef.current[2] = el} data-value="1000">0</span>%
                 </div>
                 <div className="text-sm text-gray-600 group-hover:text-blue-600 transition-colors">Satisfacción Garantizada</div>
               </div>
